@@ -1,0 +1,252 @@
+// Presets
+.yellow-button{
+    background: linear-gradient(94.43deg, #E99F10 10.06%, #FFBE40 91.18%);
+    box-shadow: 0px 0px 100px 3px rgba(222, 174, 81, 0.44), 0px 7px 0px 1px #926D24;
+    border-radius: 20px;
+
+    font-family: 'SF Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 41px;
+
+    transition: all ease-in-out 0.2s;
+
+    &:hover{
+        box-shadow: 0px 0px 200px 3px rgba(231, 165, 32, 0.44), 0px 7px 0px 1px #926D24;
+    }
+    &:active{
+        transform: translate(0, 7px);
+        box-shadow: 0px 0px 100px 3px rgba(222, 174, 81, 0.44);
+    }
+}
+// Presets End
+
+
+
+:root{
+    @media screen and (orientation:portrait) and (max-width: 425px) {
+      --message-max-width: 90%
+    }
+    @media screen and (orientation:portrait) and (max-width: 380px) {
+        --message-max-width: 95%
+      }
+
+}
+body{
+    @media screen and (orientation:portrait) and (max-width: 450px) {
+        padding: 0 5px;
+    }
+}
+
+.grid-wrapper{
+    position: relative;
+}
+
+.intro{
+    max-width: 1430px;
+    margin: 0 auto;
+
+    min-height: 100vh;
+    padding-top: 100px;
+
+    &__grid{
+        display: grid;
+        gap: 0px 0px;
+        grid-template-columns: 1fr 1fr;  
+        grid-template-areas: 
+            "chat di"
+            "button di";
+
+        @media screen and (orientation:portrait) {
+            grid-template-areas: 
+                "chat di"
+                "chat di"
+                "button button";
+        }
+    }
+
+    @media (max-width: 1366px) {
+        max-width: 1100px;
+    }
+    @media screen and (orientation:portrait) and (max-width: 820px) {
+        max-width: 750px;
+    }
+    
+
+    &__chat{
+        grid-area: chat;
+        max-width: 580px;
+
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+
+        margin-top: 7%;
+        padding: 0 10px;
+
+        @media (min-width: 1800px) {
+            max-width: unset;
+            p{
+                font-size: 38px;
+            }
+        }
+
+        @media (max-width: 1030px) {
+            p{
+                font-size: 25px;
+            }
+        }
+        @media screen and (orientation:portrait) and (max-width: 760px) {
+            p{
+                font-size: 17px;
+            }
+        }
+        @media screen and (orientation:portrait) and (max-width: 425px) {
+            p{
+                font-size: 15px;
+            }
+            
+        }
+        @media screen and (orientation:portrait) and (max-width: 375px) {
+            p{
+                font-size: 12px;
+            }
+        }
+
+
+        //Portrait adaptation
+        @media screen and (orientation:portrait) and (max-width: 820px) {
+            position: absolute;
+            left: 0;
+            max-width: 470px;
+        }
+        @media screen and (orientation:portrait) and (max-width: 450px) {
+            position: absolute;
+            left: 0;
+            max-width: 255px;
+            p{
+                font-size: 15px;
+            }
+        }
+        @media screen and (orientation:portrait) and (max-width: 380px) {
+            position: absolute;
+            left: 0;
+            max-width: 250px;
+            p{
+                font-size: 15px;
+            }
+        }
+        //
+    }
+    .yellow-button {
+        grid-area: button;
+        width: 8em;
+        height: 2em;
+        font-size: clamp(25px, calc(1.5625rem + (35 - 25) * ((100vw - 1024px) / (1920 - 1024))), 35px);;
+
+        align-self: start;
+        justify-self: center;
+
+        @media (min-width: 1800px) {
+            font-size: 35px;
+            border-radius: 30px;
+        }
+        @media screen and (orientation:portrait) {
+           margin: 30px;
+        }
+        @media screen and (orientation:portrait) and (max-width: 450px) {
+            font-size: 18px;
+        }
+        @media screen and (orientation:portrait) and (max-width: 380px) {
+            font-size: 16px;
+            height: 2.4em;
+        }      
+        
+    }
+    .di{
+        grid-area: di;
+        position: relative;
+        justify-content: center;
+        &__img{
+            height: calc(100vh - 150px);
+            margin: 0 auto;
+            display: block;
+
+            @media screen and (orientation:portrait) {
+                height: unset;
+                max-width: 100%;
+            }
+        } 
+
+        &__nameteg{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%);
+
+            width: 9em;
+            height: 13%;
+
+            background: rgba(255, 255, 255, 0.4);
+            box-shadow: -8px 10px 8px 1px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(10px);
+            border-radius: .7em;
+
+            font-family: 'AmadeusAP';
+            font-style: normal;
+            font-weight: 400;
+            font-size: clamp(40px, calc(2.5rem + (80 - 40) * ((100vw - 1024px) / (1920 - 1024))), 80px);
+
+
+            @media (min-width: 1800px) {
+                width: 100%;
+                height: 12%;
+                border-radius: 35px;
+                font-size: 80px;
+            }
+            @media screen and (orientation:portrait) {
+                width: 100%;
+            }
+            @media screen and (orientation:portrait) and (max-width: 450px) {
+                font-size: 23px;
+            }   
+
+            p{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-right: -50%;
+                transform: translate(-50%, -35%)
+            }
+        }
+
+        &__ring-outside{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            max-width: 100%;
+            @media screen and (orientation:portrait) and (max-width: 450px) {
+                max-width: 120%;
+                transform: translate(-40%, -50%);
+              }
+        }
+
+        &__ring-inside{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            @media screen and (orientation:portrait) and (max-width: 450px) {
+                max-width: 100%;
+                transform: translate(-38%, -50%);
+              }
+        }
+    }
+
+}

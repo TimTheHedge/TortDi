@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/imessageChatBubblesLib/imessageChatBubblesLib.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
 
     <title>TortDi</title>
 </head>
@@ -112,7 +115,27 @@
 <main>
 <!-- Intro -->
     <section class="intro">
-        
+            <div class="grid-wrapper">
+                <div class="intro__grid">
+                    <div class="intro__chat">
+                        <p class="i-send">Делаю тортики, после которых просят добавку! 😋</p>
+                        <p class="i-receive">Вау, хочу попробовать! 🎂</p>
+                        <p class="i-send">Пишите мне в соц. сети, обсудим все ваши идеи!)</p>
+                    </div>
+                <button class="yellow-button">
+                    Написать
+                </button>
+                <div class="di">
+                    <picture>
+                        <source type="image/webp" srcset="/img/intro/Di/Di/webp/Di@1.webp 1x, /img/intro/Di/Di/webp/Di@2.webp 2x"> 
+                        <img class="di__img" src="/img/intro/Di/Di/png/Di@1-min.png 1x" srcset="/img/intro/Di/Di/png/Di@2-min.png 2x">
+                    </picture>
+                    <div class="di__nameteg"><p>Диана Томюк</p></div>
+                    <img class="di__ring-outside" src="/img/intro/Di/rings/png/ring-outside.png 1x" srcset="/img/intro/Di/rings/png/ring-outside@2.png 2x">
+                    <img class="di__ring-inside" src="/img/intro/Di/rings/png/ring_inside.png 1x" srcset="/img/intro/Di/rings/png/ring_inside@2.png 2x">
+                </div>
+            </div>
+            </div>
     </section>
 <!-- Intro End -->
 </main>
@@ -122,6 +145,7 @@
 
     <!-- Scripst -->
     <script src="/js/script.js"></script>
+    <script src="/imessageChatBubblesLib/imessageChatBubblesLib.js"></script>
     <!-- Scripst End -->
 </body>
 </html>

@@ -1,8 +1,7 @@
 @import "_reset.scss";
 @import "_fonts.scss";
 @import "_header.scss";
-@import "_chat-bubbles.scss";
-@import "intro.scss";
+@import "_intro.scss";
 
 
 body{
@@ -10,6 +9,21 @@ body{
     background: #50565C; //url(/img/background/noize.png) repeat;
     font-family: 'Open Sans';
 
-    padding: 10px;
+    padding: 0 10px;
+    @media screen and (orientation:portrait) and (max-width: 450px) {
+        padding: 0 5px;
+    }
 }
 
+:root{
+    --page-bg-color: #50565C;
+    --send-bg-color: #E9E9EB;
+    --send-text-color: #171717;
+
+    --receive-bg-color: #0B93F6;
+    --receive-text-color: white;
+
+    
+
+    --font-size: 30px;
+}
